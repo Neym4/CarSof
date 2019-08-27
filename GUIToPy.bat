@@ -1,0 +1,1 @@
+C:\Users\admin\PycharmProjects\SoftForCar2\venv\Scripts\pyuic5.exe C:\Users\admin\PycharmProjects\Exhibition-mjun1 (1)\Exhibition-mjun1\vievs\softForCar.ui -o C:\Users\admin\PycharmProjects\Exhibition-mjun1 (1)\Exhibition-mjun1\MainForm.py
