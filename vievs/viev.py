@@ -54,7 +54,15 @@ class View(QtWidgets.QMainWindow, Ui_softForCar):
         messageBox.setIcon(QtWidgets.QMessageBox.Critical)
         messageBox.exec_()
 
-
+    def keyPressEvent(self, e):
+        if e.key() == QtCore.Qt.Key_W:
+            self.ButtonToUpSignal.emit()
+        if e.key() == QtCore.Qt.Key_D:
+            self.ButtonToRightSignal.emit()
+        if e.key() == QtCore.Qt.Key_S:
+            self.ButtonToBeckSignal.emit()
+        if e.key() == QtCore.Qt.Key_A:
+            self.ButtonToLeftSignal.emit()
 
 
 

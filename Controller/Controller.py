@@ -27,70 +27,6 @@ class Controller:
         self._view.ButtonToRightSignal.connect(self.moveRight)
 
 
-    def pushButtonOn(self):
-        if self.objServer.run_projector() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Проектор включён")
-
-
-    def pushButtonOff(self):
-        if self.objServer.stop_projector() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Проектор выключен")
-
-    def pushButtonM1Yes(self):
-        if self.objServer.run_monitor1() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Монитор №1 включён")
-
-    def pushButtonM1No(self):
-        if self.objServer.stop_monitor1() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Монитор №1 выключен")
-
-    def pushButtonM2Yes(self):
-        if self.objServer.run_monitor2() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Монитор №2 включён")
-
-    def pushButtonM2No(self):
-        if self.objServer.stop_monitor2() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Монитор №2 выключен")
-
-
-    def pushButtonM3Yes(self):
-        if self.objServer.run_monitor3() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Монитор №3 включён")
-
-
-    def pushButtonM3No(self):
-        if self.objServer.stop_monitor3() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Монитор №3 выключен")
-
-    def pushButtonAllMOn(self):
-        if self.objServer.run_video() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Все мониторы включены")
-
-
-    def pushButtonAllMOff(self):
-        if self.objServer.stop_video() == 0:
-            self._view.Error_Connection()
-        else:
-            print("Все мониторы выключены")
-
     def pushStop(self):
         self.objServer.stop()
 
@@ -99,14 +35,33 @@ class Controller:
         return self._app.exec_()
 
     def moveUp(self):
-        print('Движение вперед')
+        if self.objServer.run_up() == 0:
+            #self._view.Error_Connection()
+            pass
+        else:
+            print('Движение вперед')
 
     def moveRight(self):
-        print('Движение вправо')
+        if self.objServer.run_right() == 0:
+            #self._view.Error_Connection()
+            pass
+        else:
+            print('Движение вправо')
+
 
     def moveLeft(self):
-        print('Движение влево')
+        if self.objServer.run_left() == 0:
+            #self._view.Error_Connection()
+            pass
+        else:
+            print('Движение влево')
+
 
     def moveBack(self):
-        print('Движение назад')
+        if self.objServer.run_back() == 0:
+            #self._view.Error_Connection()
+            pass
+        else:
+            print('Движение назад')
+
 
