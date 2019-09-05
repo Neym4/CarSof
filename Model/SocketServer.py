@@ -49,48 +49,10 @@ class Server(Thread):
         print("stop EXHIBITION")
         self.terminate()
 
-    def run_video(self):
-        for i in self.RPI:
-            try:
-                self.conn = self.RPI[i][1]
-                if not self.conn is None:
-                    self.conn.send(b"run_video")
-                else:
-                    return 0
-            except socket.error as e:
-                print('error', str(e))
-                return 0
-        return 1
-
-    def stop_video(self):
-        for i in self.RPI:
-            try:
-                self.conn = self.RPI[i][1]
-                if not self.conn is None:
-                    self.conn.send(b"stop_video")
-                else:
-                    return 0
-            except socket.error as e:
-                print('error', str(e))
-                return 0
-        return 1
-
-    def disconnect(self):
-        for i in self.RPI:
-            try:
-                self.conn = self.RPI[i][1]
-                if not self.conn is None:
-                    self.conn.send(b"disconnect")
-                else:
-                    return 0
-            except socket.error as e:
-                print('error', str(e))
-                return 0
-        return 1
 
     def run_up(self):
             try:
-                self.conn = self.RPI["Projector"][1]
+                self.conn = self.RPI["Car"][1]
                 if not self.conn is None:
                     self.conn.send(b"run_up")
                 else:
@@ -104,7 +66,7 @@ class Server(Thread):
 
     def run_right(self):
             try:
-                self.conn = self.RPI["Monitor1"][1]
+                self.conn = self.RPI["Car"][1]
                 if not self.conn is None:
                     self.conn.send(b"run_rigth")
                 else:
@@ -117,7 +79,7 @@ class Server(Thread):
 
     def run_left(self):
             try:
-                self.conn = self.RPI["Monitor2"][1]
+                self.conn = self.RPI["Car"][1]
                 if not self.conn is None:
                     self.conn.send(b"run_left")
                 else:
@@ -130,9 +92,9 @@ class Server(Thread):
 
     def run_back(self):
             try:
-                self.conn = self.RPI["Monitor3"][1]
+                self.conn = self.RPI["Car"][1]
                 if not self.conn is None:
-                    self.conn.send(b"run_monitor3")
+                    self.conn.send(b"run_back")
                 else:
                     return 0
             except socket.error as e:

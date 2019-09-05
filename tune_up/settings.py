@@ -1,11 +1,7 @@
 import json
 
 settings_original = {}
-settings_original['RPI1'] = ['192.168.1.56', None]
-settings_original['RPI2'] = ['192.168.1.187', None]
-#settings_original['RPI3'] = ['', None]
-#settings_original['RPI4'] = ['', None]
-
+settings_original['RPI1'] = ['192.168.1.101', None]
 
 
 class Settings:
