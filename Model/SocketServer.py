@@ -56,7 +56,7 @@ class Server(Thread):
                 if not self.conn is None:
                     self.conn.send(b"run_up")
                 else:
-                    return 0
+                    return 1 #!!!!!!!!!!!!!!!!!!!!!!!!!
             except socket.error as e:
                 print('error', str(e))
                 return 0
@@ -70,7 +70,7 @@ class Server(Thread):
                 if not self.conn is None:
                     self.conn.send(b"run_rigth")
                 else:
-                    return 0
+                    return 1 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             except socket.error as e:
                 print('error', str(e))
                 return 0
@@ -83,7 +83,7 @@ class Server(Thread):
                 if not self.conn is None:
                     self.conn.send(b"run_left")
                 else:
-                    return 0
+                    return 1 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             except socket.error as e:
                 print('error', str(e))
                 return 0
@@ -96,7 +96,7 @@ class Server(Thread):
                 if not self.conn is None:
                     self.conn.send(b"run_back")
                 else:
-                    return 0
+                    return 1 #!!!!!!!!!!!!!!!!!!!!!!!!!!!
             except socket.error as e:
                 print('error', str(e))
                 return 0

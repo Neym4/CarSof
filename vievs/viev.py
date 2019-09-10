@@ -40,7 +40,6 @@ class View(QtWidgets.QMainWindow, Ui_softForCar):
         self.ButtonToLeft.clicked.connect(self.ButtonToLeftSignal)
         self.ButtonToBeck.clicked.connect(self.ButtonToBeckSignal)
         self.ButtonToUp.clicked.connect(self.ButtonToUpSignal)
-
         self.Video.frameSignal.connect(self.showGraphicsViewImage, QtCore.Qt.QueuedConnection)
 
     def showGraphicsViewImage(self, pixMap):
@@ -63,10 +62,6 @@ class View(QtWidgets.QMainWindow, Ui_softForCar):
             self.ButtonToBeckSignal.emit()
         if e.key() == QtCore.Qt.Key_A:
             self.ButtonToLeftSignal.emit()
-
-
-
-
 
 
     # def on_create_context_menu(self):

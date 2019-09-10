@@ -35,33 +35,30 @@ class Controller:
         return self._app.exec_()
 
     def moveUp(self):
-        # if self.objServer.run_up() == 0:
-        #     #self._view.Error_Connection()
-        #     pass
-        # else:
-        print('Движение вперед')
+        if self.objServer.run_up() == 0:
+            self._view.Error_Connection
+        else:
+            print('Движение вперед')
 
     def moveRight(self):
-        # if self.objServer.run_right() == 0:
-        #     #self._view.Error_Connection()
-        #     pass
-        # else:
-        print('Движение вправо')
+        if self.objServer.run_right() == 0:
+            self._view.Error_Connection()
+
+        else:
+            print('Движение вправо')
 
 
     def moveLeft(self):
-        # if self.objServer.run_left() == 0:
-        #     #self._view.Error_Connection()
-        #     pass
-        # else:
-        print('Движение влево')
+        if self.objServer.run_left() == 0:
+            self._view.Error_Connection()
+        else:
+            print('Движение влево')
 
 
     def moveBack(self):
-        # if self.objServer.run_back() == 0:
-        #     #self._view.Error_Connection()
-        #     pass
-        # else:
-        print('Движение назад')
+        if self.objServer.run_back() == 0:
+            self._view.Error_Connection()
+        else:
+            print('Движение назад')
 
 
